@@ -80,12 +80,12 @@ public class FileUtils {
 		return getOldDataFolder().exists() && getOldDataFolder().list() != null;
 	}
 
-	public static File getMovieThumb(Context c, String movieId) {
-		return new File(MizuuApplication.getMovieThumbFolder(c), movieId + ".jpg");
+	public static File getMovieThumb(Context c, int movieId) {
+		return new File(MizuuApplication.getMovieThumbFolder(c), String.valueOf(movieId) + ".jpg");
 	}
 
-	public static File getMovieBackdrop(Context c, String movieId) {
-		return new File(MizuuApplication.getMovieBackdropFolder(c), movieId + "_bg.jpg");
+	public static File getMovieBackdrop(Context c, int movieId) {
+		return new File(MizuuApplication.getMovieBackdropFolder(c), String.valueOf(movieId) + "_bg.jpg");
 	}
 
 	public static File getTvShowThumb(Context c, String showId) {
